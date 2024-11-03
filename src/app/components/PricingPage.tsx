@@ -8,6 +8,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Switch } from "./ui/switch";
+import { SignUpButton } from "@clerk/nextjs";
 
 export function PricingPage() {
   const [isYearly, setIsYearly] = useState(false);
@@ -121,14 +122,14 @@ export function PricingPage() {
               ))}
             </div>
 
-            <Link href="/signup">
+            <SignUpButton>
               <Button
                 size="lg"
                 className="w-full bg-blue-600 hover:bg-blue-700"
               >
                 Join Our Network
               </Button>
-            </Link>
+            </SignUpButton>
 
             <p className="text-sm text-muted-foreground text-center mt-4">
               Cancel at any time

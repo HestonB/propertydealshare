@@ -1,9 +1,8 @@
-"use client";
-
 import { Menu } from "lucide-react";
 import Link from "next/link";
 import { Button } from "./button";
 import { useState } from "react";
+import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,9 +38,16 @@ export function Navbar() {
             >
               Pricing
             </Link>
-            <Link href="/signup">
-              <Button className="bg-blue-600 hover:bg-blue-700">Sign Up</Button>
-            </Link>
+            <SignedOut>
+              <SignInButton>
+                <Button className="bg-blue-600 hover:bg-blue-700">
+                  Sign In
+                </Button>
+              </SignInButton>
+            </SignedOut>
+            <SignedIn>
+              <UserButton afterSignOutUrl="/" />
+            </SignedIn>
           </div>
 
           {/* Mobile Menu Button */}
@@ -74,11 +80,16 @@ export function Navbar() {
             >
               Pricing
             </Link>
-            <Link href="/signup" className="block">
-              <Button className="w-full bg-blue-600 hover:bg-blue-700">
-                Sign Up
-              </Button>
-            </Link>
+            <SignedOut>
+              <SignInButton>
+                <Button className="w-full bg-blue-600 hover:bg-blue-700">
+                  Sign In
+                </Button>
+              </SignInButton>
+            </SignedOut>
+            <SignedIn>
+              <UserButton afterSignOutUrl="/" />
+            </SignedIn>
           </div>
         )}
       </div>

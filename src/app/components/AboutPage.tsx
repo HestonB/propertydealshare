@@ -18,6 +18,7 @@ import {
   AccordionTrigger,
 } from "./ui/accordion";
 import Link from "next/link";
+import { SignUpButton } from "@clerk/nextjs";
 
 export function AboutPage() {
   const fadeIn = {
@@ -257,11 +258,14 @@ export function AboutPage() {
               sharing quality deals today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/signup">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-                  Get Started <ArrowRight className="ml-2 h-4 w-4" />
+              <SignUpButton>
+                <Button
+                  size="lg"
+                  className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700"
+                >
+                  Get Started Now <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
-              </Link>
+              </SignUpButton>
               {/* <Link href="/deals">
                 <Button
                   size="lg"
