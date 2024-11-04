@@ -5,8 +5,11 @@ import { Badge } from "../components/ui/badge";
 import { Card } from "../components/ui/card";
 import { Bell, Calendar, Mail, Star } from "lucide-react";
 import { SignedIn, SignedOut, RedirectToSignIn } from "@clerk/nextjs";
+import { useUser } from "@clerk/clerk-react";
 
 export default function WaitlistPage() {
+  const { user } = useUser();
+
   return (
     <>
       <SignedIn>
@@ -21,7 +24,9 @@ export default function WaitlistPage() {
               <Badge variant="secondary" className="mb-4">
                 Welcome to the Waitlist
               </Badge>
-              <h1 className="text-4xl font-bold mb-6">You're In! 🎉</h1>
+              <h1 className="text-4xl font-bold mb-6">
+                {user?.firstName}, You're In! 🎉
+              </h1>
               <p className="text-xl text-muted-foreground mb-12">
                 Thank you for joining the Property Deal Share waitlist. You're
                 now part of an exclusive group who will be first to access our
