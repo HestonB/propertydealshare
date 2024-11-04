@@ -116,8 +116,8 @@ export function AboutPage() {
                   knew there had to be a better way.
                 </p>
                 <p>
-                  That's when DealFinder was born. We set out to create what we
-                  wished existed: a professional platform where serious
+                  That's when Property Deal Share was born. We set out to create
+                  what we wished existed: a professional platform where serious
                   investors could connect with verified sourcers, access
                   detailed deal information, and make confident investment
                   decisions.
@@ -224,7 +224,8 @@ export function AboutPage() {
               </Badge>
               <h2 className="text-3xl font-bold mb-4">Common Questions</h2>
               <p className="text-muted-foreground">
-                Everything you need to know about DealFinder and how it works.
+                Everything you need to know about Property Deal Share and how it
+                works.
               </p>
             </div>
 

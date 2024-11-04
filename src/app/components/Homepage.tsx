@@ -72,7 +72,9 @@ export function HomePage() {
       <section className="py-24 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">Why Choose DealFinder?</h2>
+            <h2 className="text-3xl font-bold mb-4">
+              Why Choose Property Deal Share?
+            </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Replace scattered WhatsApp groups and unreliable networks with a
               professional platform built for serious property investors.
