@@ -18,7 +18,7 @@ import {
   AccordionTrigger,
 } from "./ui/accordion";
 import Link from "next/link";
-import { SignUpButton } from "@clerk/nextjs";
+import CallToAction from "./ui/callToAction";
 
 export function AboutPage() {
   const fadeIn = {
@@ -42,9 +42,9 @@ export function AboutPage() {
 
   const faqs = [
     {
-      question: "How do you verify property sourcers?",
+      question: "When do you plan to launch the platform?",
       answer:
-        "We have a rigorous verification process that includes checking business credentials, past deal history, and references from previous clients. We also maintain ongoing monitoring of deal quality and investor feedback.",
+        "We are currently mid way through our development of this platform and plan to launch by the end of 2024. Join our waitlist to be the first in line when we do and get your first month free!",
     },
     {
       question: "What types of deals can I find on the platform?",
@@ -54,7 +54,7 @@ export function AboutPage() {
     {
       question: "How is this different from property groups on WhatsApp?",
       answer:
-        "Unlike informal WhatsApp groups, we provide a structured, professional platform with verified deals, detailed analytics, and direct communication channels. All deals are properly documented and include comprehensive investment metrics.",
+        "Unlike informal WhatsApp groups, we provide a structured, professional platform, detailed analytics, and direct communication channels. All deals are properly documented and include comprehensive investment metrics.",
     },
     {
       question: "Can I list my own property deals?",
@@ -64,7 +64,7 @@ export function AboutPage() {
     {
       question: "What happens after I find a deal I'm interested in?",
       answer:
-        "You can directly contact the property sourcer through our platform, review all documentation, and proceed with your due diligence. We provide communication tools and deal tracking features to help manage the process.",
+        "You can directly contact the property sourcer, review all documentation, and proceed with your due diligence. We provide communication methods and deal tracking features to help manage the process.",
     },
   ];
 
@@ -96,7 +96,7 @@ export function AboutPage() {
       {/* Story Section */}
       <section className="py-24 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div className="grid md:grid-cols-1 gap-16 items-center">
             <motion.div
               initial="initial"
               whileInView="animate"
@@ -124,7 +124,7 @@ export function AboutPage() {
                 </p>
               </div>
             </motion.div>
-
+            {/* 
             <motion.div
               className="grid grid-cols-2 gap-4"
               initial={{ opacity: 0, scale: 0.8 }}
@@ -145,7 +145,7 @@ export function AboutPage() {
                   </div>
                 </div>
               ))}
-            </motion.div>
+            </motion.div> */}
           </div>
         </div>
       </section>
@@ -174,7 +174,7 @@ export function AboutPage() {
                 icon: Target,
                 title: "Transparency",
                 description:
-                  "Every deal includes verified information and comprehensive metrics for informed decision-making.",
+                  "Every deal includes all the information and comprehensive metrics for informed decision-making.",
               },
               {
                 icon: Users,
@@ -241,44 +241,7 @@ export function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gray-50 dark:bg-gray-800">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="max-w-3xl mx-auto text-center"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl font-bold mb-6">
-              Join Our Growing Community
-            </h2>
-            <p className="text-xl text-muted-foreground mb-8">
-              Be part of the future of property investment. Start finding and
-              sharing quality deals today.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <SignUpButton>
-                <Button
-                  size="lg"
-                  className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700"
-                >
-                  Get Started Now <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </SignUpButton>
-              {/* <Link href="/deals">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-blue-600 text-blue-600 hover:bg-blue-50"
-                >
-                  Browse Deals
-                </Button>
-              </Link> */}
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      <CallToAction />
     </div>
   );
 }

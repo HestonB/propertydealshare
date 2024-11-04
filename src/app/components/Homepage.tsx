@@ -20,6 +20,8 @@ import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { PricingPage } from "./PricingPage";
+import PhotoDemos from "./ui/photoDemos";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -57,18 +59,9 @@ export function HomePage() {
                   size="lg"
                   className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700"
                 >
-                  Sign Up <ArrowRight className="ml-2 h-4 w-4" />
+                  Join Our Waitlist <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </SignUpButton>
-              {/* <Link href="/signup">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="w-full sm:w-auto border-blue-600 text-blue-600 hover:bg-blue-50"
-                >
-                  Sign Up
-                </Button>
-              </Link> */}
             </div>
           </motion.div>
         </div>
@@ -91,7 +84,7 @@ export function HomePage() {
                 icon: Search,
                 title: "Find Deals Faster",
                 description:
-                  "Access a curated marketplace of verified property deals. No more scrolling through endless chat groups.",
+                  "Access a curated marketplace of property deals. No more scrolling through endless chat groups.",
               },
               {
                 icon: Target,
@@ -103,7 +96,7 @@ export function HomePage() {
                 icon: CheckCircle2,
                 title: "Verified Opportunities",
                 description:
-                  "Every deal is vetted and includes comprehensive investment metrics and documentation.",
+                  "Every deal includes comprehensive investment metrics and documentation.",
               },
             ].map((feature, index) => (
               <motion.div
@@ -129,52 +122,7 @@ export function HomePage() {
       </section>
 
       {/* Video Demo Section */}
-      <section className="py-24 bg-gray-50 dark:bg-gray-800">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-          >
-            <Badge variant="secondary" className="mb-4">
-              See It In Action
-            </Badge>
-            <h2 className="text-3xl font-bold mb-4">Watch How It Works</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Take a quick tour of our platform and discover how easy it is to
-              find and list property deals.
-            </p>
-          </motion.div>
-
-          <motion.div
-            className="max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            <div className="relative aspect-video rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-700">
-              <iframe
-                className="absolute inset-0 w-full h-full"
-                src="https://www.youtube.com/watch?v=Hujg5BOiZb4"
-                title="PropertyDealShare Platform Demo"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-              {/* <div className="absolute inset-0 flex items-center justify-center bg-blue-600/10">
-                <Button
-                  size="lg"
-                  className="bg-blue-600 hover:bg-blue-700 rounded-full w-16 h-16 flex items-center justify-center"
-                >
-                  <Play className="h-6 w-6" />
-                </Button>
-              </div> */}
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      <PhotoDemos />
 
       {/* Timeline Section */}
       <section className="py-24 bg-white dark:bg-gray-900">
@@ -200,7 +148,7 @@ export function HomePage() {
                       icon: Users,
                       title: "Reach Investors",
                       description:
-                        "Your deal is instantly visible to our network of verified investors.",
+                        "Your deal is instantly visible to our network of investors.",
                     },
                     {
                       icon: MessageSquare,
@@ -270,7 +218,7 @@ export function HomePage() {
                       icon: CheckCircle2,
                       title: "Verified Sourcers",
                       description:
-                        "Deal with trusted property sourcers with verified track records.",
+                        "Deal with trusted property sourcers with great track records.",
                     },
                   ].map((step, index) => (
                     <motion.div
@@ -299,45 +247,8 @@ export function HomePage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 bg-white dark:bg-gray-900">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center max-w-3xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl font-bold mb-4">
-              Ready to Transform Your Property Investment Journey?
-            </h2>
-            <p className="text-muted-foreground mb-8">
-              Join our growing network of property professionals and take your
-              investment strategy to the next level.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <SignUpButton>
-                <Button
-                  size="lg"
-                  className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700"
-                >
-                  Get Started Now <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </SignUpButton>
-              {/* <Link href="/deals">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="w-full sm:w-auto border-blue-600 text-blue-600 hover:bg-blue-50"
-                >
-                  Browse Available Deals
-                </Button>
-              </Link> */}
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      {/* Pricing Page Sign up CTA */}
+      <PricingPage />
     </div>
   );
 }

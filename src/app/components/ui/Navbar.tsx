@@ -38,13 +38,13 @@ export function Navbar() {
             >
               Pricing
             </Link>
-            <SignedOut>
+            {/* <SignedOut>
               <SignInButton>
                 <Button className="bg-blue-600 hover:bg-blue-700">
                   Sign In
                 </Button>
               </SignInButton>
-            </SignedOut>
+            </SignedOut> */}
             <SignedIn>
               <UserButton afterSignOutUrl="/" />
             </SignedIn>
