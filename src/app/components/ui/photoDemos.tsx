@@ -26,16 +26,16 @@ const PhotoDemos = () => {
       description:
         "Connect directly with property sourcers and investors through our secure messaging system.",
       icon: MessageSquare,
-      image: "/messaging.jpg",
+      image: "/images/modalcontacts.png",
       alt: "Messaging interface",
     },
     {
-      title: "Analytics Dashboard",
+      title: "Investment Breakdown",
       description:
-        "Track your deal performance and monitor investor interest with detailed analytics.",
+        "Get a clear breakdown of the deal to enable investors to visualise their investment journey.",
       icon: TrendingUp,
-      image: "/analytics.jpg",
-      alt: "Analytics dashboard",
+      image: "/images/modalinvestmentbreakdown.png",
+      alt: "Deal Breakdown",
     },
   ];
 

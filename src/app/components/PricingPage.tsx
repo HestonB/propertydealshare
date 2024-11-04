@@ -13,8 +13,8 @@ import { SignUpButton } from "@clerk/nextjs";
 export function PricingPage() {
   const [isYearly, setIsYearly] = useState(false);
 
-  const monthlyPrice = 9.99;
-  const yearlyPrice = 100;
+  const monthlyPrice = 19.99;
+  const yearlyPrice = 200;
   const monthlySavings = (monthlyPrice * 12 - yearlyPrice) / 12;
 
   const features = {
