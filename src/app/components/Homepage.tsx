@@ -22,6 +22,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { PricingPage } from "./PricingPage";
 import PhotoDemos from "./ui/photoDemos";
+import CallToAction from "./ui/callToAction";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -248,7 +249,7 @@ export function HomePage() {
       </section>
 
       {/* Pricing Page Sign up CTA */}
-      <PricingPage />
+      <CallToAction />
     </div>
   );
 }

@@ -32,12 +32,12 @@ export function Navbar() {
             >
               About
             </Link>
-            <Link
+            {/* <Link
               href="/pricing"
               className="text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-200 dark:hover:text-blue-400"
             >
               Pricing
-            </Link>
+            </Link> */}
             {/* <SignedOut>
               <SignInButton>
                 <Button className="bg-blue-600 hover:bg-blue-700">
