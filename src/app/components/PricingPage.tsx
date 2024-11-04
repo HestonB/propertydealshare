@@ -19,15 +19,12 @@ export function PricingPage() {
 
   const features = [
     "Unlimited access to all property deals",
-    "Direct messaging with property sourcers",
-    "Real-time deal notifications",
+    "Unlimited posts for property deals",
+    "Direct communication methods",
     "Detailed investment metrics (ROI, GDV)",
-    "Verified property sourcers",
     "Deal tracking and analytics",
     "Save and compare deals",
     "Priority support",
-    "Access to exclusive webinars",
-    "Monthly market insights report",
   ];
 
   return (
@@ -82,11 +79,11 @@ export function PricingPage() {
           </div>
 
           <Card className="p-8 relative overflow-hidden">
-            <div className="absolute top-4 right-4">
+            {/* <div className="absolute top-4 right-4">
               <Badge className="bg-gradient-to-r from-orange-400 to-rose-400 text-white">
                 <Star className="w-4 h-4 mr-1" /> Most Popular
               </Badge>
-            </div>
+            </div> */}
 
             <div className="text-center mb-8">
               <h2 className="text-2xl font-bold mb-2">Premium Membership</h2>
