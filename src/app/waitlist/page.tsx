@@ -25,7 +25,7 @@ export default function WaitlistPage() {
                 Welcome to the Waitlist
               </Badge>
               <h1 className="text-4xl font-bold mb-6">
-                {user?.firstName}, You're In! 🎉
+                {user?.firstName}, you're in! 🎉
               </h1>
               <p className="text-xl text-muted-foreground mb-12">
                 Thank you for joining the Property Deal Share waitlist. You're
